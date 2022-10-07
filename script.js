@@ -1,4 +1,4 @@
-const filmes = document.querySelector('.movies')
+const movies = document.querySelector('.movies')
 const movie = document.querySelectorAll('.movie')
 const next = document.querySelector('.btn-next')
 const prev = document.querySelector('.btn-prev')
@@ -20,6 +20,7 @@ const modalClose = document.querySelector('.modal__close')
 const genresAverage = document.querySelector('.modal__genre-average')
 const btnTheme = document.querySelector('.btn-theme')
 const body = document.querySelector('body')
+
 const dadosFilmes = []
 let pesquisa = []
 let pag = 0;
@@ -112,7 +113,7 @@ function redenrizar(indice) {
 
         avaliacaoDoFilme.append(imgEstrela)
         imagem.append(filmeInfo, tituloDoFilme, avaliacaoDoFilme)
-        filmes.append(imagem)
+        movies.append(imagem)
 
     })
 }
@@ -199,7 +200,7 @@ btnTheme.addEventListener('click', () => {
         body.style.setProperty('--highlight-background', '#454545')
         body.style.setProperty('--color', '#FFF')
         body.style.setProperty('--highlight-color', '#FFF')
-        body.style.setProperty(' --highlight-description', '#FFF')
+        body.style.setProperty('--highlight-description', '#FFF')
     } else {
         localStorage.setItem('tema', 'claro')
         btnTheme.src = "./assets/light-mode.svg"
@@ -209,6 +210,6 @@ btnTheme.addEventListener('click', () => {
         body.style.setProperty('--highlight-background', '#FFF')
         body.style.setProperty('--color', '#000')
         body.style.setProperty('--highlight-color', '#000')
-        body.style.setProperty(' --highlight-description', '#000')
+        body.style.setProperty('--highlight-description', '#000')
     }
 })
